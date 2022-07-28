@@ -88,10 +88,10 @@ $('ol').append('<li>Puppies Rock!</li>');
 // Scratch that; the list is silly. Empty the aside and put a paragraph in it apologizing for the list’s existence.
 $('aside').empty().append("<p>I'm very sorry. That list sucked.</p>");
 // When you change the numbers in the three inputs on the bottom, the background color of the body should change to match whatever the three values in the inputs are.
-$('input').on('keyup blur change', () =>{
+$('input').on('change', () =>{
   let r = $('input').eq(0).val();
-  let g = $('input').eq(1).val();
-  let b = $('input').eq(2).val();
+  let g = $('input').eq(2).val();
+  let b = $('input').eq(1).val();
   $('body').css('background-color',  `rgb(${r},${g},${b})`)
 })
 // Add an event listener so that when you click on the image, it is removed from the DOM.
